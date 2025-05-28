@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
+import useCustomEffect from "../hooks/use-custom-effect";
 
 function Counter() {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
+  
+
+  useCustomEffect(() => {
     console.log("Effect Triggered", count);
-    return () => {
-      console.log("Cleanup invoked!");
-    };
   }, [count]);
 
   console.log("rendered");
